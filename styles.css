@@ -1,0 +1,284 @@
+body {
+    background-color: #0f4c81;
+    font-family: Calibri, Helvetica, sans-serif;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    top: 45%;
+    left: 50%;
+    height: 85%;
+    max-width:540px;
+    transform: translate(-50%, 50%);
+}
+
+.tabs [type=radio] {
+    display: none;
+    height: 20px;   
+}
+
+label {
+    /* position: absolute; */
+    /* display: inline-block; */
+    /* margin-right: -3px; Remove whitespace for display: inline-block */ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: bold; 
+    justify-content: center;
+    background: none; /* need to change color */
+    color: #fff;
+    width: 85px;
+    height: auto;
+    padding: 10px 0px;
+}
+
+label:hover {
+    height: 20px;
+    cursor: pointer;
+}
+
+label img:hover{
+    opacity: 0.5;
+}
+
+.content {
+    /* position: absolute; */
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+  height: 500px;
+    padding: 20px;
+    /* box-shadow; inset 0px 5px 5px -5px; */
+    box-shadow: 0px 2px 15px 2px;
+    display: none;
+    border-radius: 6px;
+    transition-duration: 0.4s;
+    overflow: auto;
+  overflow-x: auto;
+}
+
+.content2 {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #D3DDDC;
+    opacity: 0.5;
+    padding: 20px;
+    /* box-shadow; inset 0px 5px 5px -5px; */
+    box-shadow: 0px 2px 15px 2px;
+    display: none;
+    border-radius: 6px;
+    transition-duration: 0.4s;
+    overflow: auto;
+}
+
+
+.profile-wrapper img {
+    display:block;
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description-heading {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.description-body {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+.description-body > p {
+    font-family: "Lucida Console", Calibri, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #0f4c81;
+}
+
+h1:hover{
+    color: #000;
+    border: 1px solid #000;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+h3 {
+    background-color: #EDCB64;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+p a {
+  color: #0f4c81;
+}
+
+p a:hover {
+  color: #EDCB64;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+ul li {
+    margin: 10px 0px;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip img {
+    position: flex;
+    width: 25px;
+    height: 25px;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+form {
+    overflow: auto;
+}
+
+form label {
+    color: #000;
+    display: block;
+    font-weight: bold;
+    text-align: justify;
+    background: none;
+    right: 0px;
+    bottom: 0px;
+    width: 50%;
+    height: auto;
+    padding: 10px 0px;
+}
+}
+
+form label:hover {
+    color: inherit;
+}
+
+input[type=text], select, textarea {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    color: black;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: black;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+[type=radio] + label {
+    color:;
+}
+
+[type=radio]:checked + label {
+    color: white;
+    border-bottom: 15px solid #D3DDDC;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    height: 0;
+    width: 110px;
+    padding:18px 0px;
+    transition-duration: 1s;
+}
+
+[type=radio]:checked + label + .content {
+    display: inline-block;
+}
+
+[type=radio]:checked + label + .content2 {
+    display: inline-block;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+/**
+[type=radio],#r1:checked ~ #slider {
+  transform: translate(-480px, 0px);
+}
+
+[type=radio],#r2:checked ~ #slider {
+  transform: translate(-380px, 0px);
+}
+
+[type=radio],#r3:checked ~ #slider {
+  transform: translate(-280px, 0px);
+}
+
+[type=radio],#r4:checked ~ #slider {
+  transform: translate(-180px, 0px);
+}
+
+[type=radio],#r5:checked ~ #slider {
+  transform: translate(-80px, 0px);
+}
+
+[type=radio],#r6:checked ~ #slider {
+  transform: translate(-80px, 0px);
+}
+*/
