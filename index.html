@@ -1,3 +1,12 @@
+<!-- 
+Reference
+Tabs: https://codepen.io/burntcustard/pen/PwGgJz?editors=1100
+HTML Form to Spreadsheeet: https://ordrespontane.blogspot.com/2018/01/html-form-to-google-sheet.html
+-->
+
+
+<!-- Need to change Profile img and LinkedIn url -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +35,7 @@
 <div class="page">
  <div class="page-body">
   <div class="main-page-body-content">
-      <!-- Page Content -->
+   <!-- Page Content -->
    <div class="tabs">
     <input type="radio" id="r1" name="t" checked="checked"/> <!-- Profile -->
     <label for="r1">
@@ -41,7 +50,7 @@
       <div id="quote"><q>The world is but a canvas to our imagination</q> - Henry David Thoreau</div>
       <div class="description-intro">
        <div class="profile-img">
-        <img src='assets/profile.jpg' alt="Profile"/>
+        <img src="assets/profile.jpg" alt="Profile"/>
        </div>
        <div class="center-description">
     	<sub> Curious | Creative | Polyglot</sub>
@@ -56,7 +65,7 @@
 
         <p>Spent roughly 2/3 of my life (as of 2020) living in a big city - Selangor, Malaysia and moved to a smaller city - Adelaide, South Australia ever since. I enjoy exploring, experimenting and trying out different things in life and is always chasing the next adventure.</p>
 
-        <p>Actively open to new opportunities anywhere (based in Adelaide but able to relocate)</p>
+        <p>Actively open to new opportunities anywhere (based in Adelaide but able to relocate).</p>
         <br/>
         <b id="heading-style">What are my abilities?</b><br/><br/>
         <b>Soft Skills</b><br/>
@@ -96,6 +105,17 @@
       <form id="rform" method="POST" action="https://script.google.com/macros/s/AKfycbxiU1pS8-dTeYWZlg2YU2dDyXxkwMKpTBNylVcn2IS2LS8gq9g/exec">
       <h3>Resume Request</h3>
       <p>I will tailor my resume and other supporting documentation asked to your request.</p>
+          <!--<div class="row">
+              <label for="title">Title</label>
+              <select id="title">
+                  <option value='0'></option>
+                  <option value="1">Miss</option>
+                  <option value="2">Ms</option>
+                  <option value="3">Mrs</option>
+                  <option value="4">Mr</option>
+              </select>
+          </div>
+          -->
        <div class="row">
         <label for="name">Name*</label>
         <input type="text" id="name" name="name" placeholder="Your name" required/><br>
